@@ -1,0 +1,17 @@
+name: ClueScrolls
+main: me.Aisu.ClueScrolls.Main
+version: 0.3.0
+author: Aisuboirad
+depend: [RewardPools]
+commands:
+   Clues:
+      description: Gives you this help menu
+      usage: /&lt;command&gt;
+   Clues Reload:
+      description: Reloads the chance list
+      permission: Clues_Manager.Reload
+      usage: /&lt;command&gt;
+   Clues give:
+      description: gives a clue scroll
+      permission: Clues_Manager.Give
+      usage: /&lt;command&gt; <player> <scrolltype>

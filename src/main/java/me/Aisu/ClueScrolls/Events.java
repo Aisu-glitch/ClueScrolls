@@ -19,7 +19,7 @@ import org.bukkit.potion.PotionEffectType;
 import net.md_5.bungee.api.ChatMessageType;
 import net.md_5.bungee.api.chat.TextComponent;
 
-import me.Aisu.RewardPools.RewardManager;
+import me.Aisu.RewardManager.RewardManager;
 
 public class Events implements Listener
 {
@@ -116,9 +116,9 @@ public class Events implements Listener
 					player.sendMessage("When you regain sight you notice its gone but you have been left rewards instead.");
 					player.addPotionEffect(PotionEffectType.BLINDNESS.createEffect(30, 1));
 					player.getInventory().setItemInMainHand(new ItemStack(Material.AIR, 1));
-					RewardManager.GiveTable(player,iMeta.getPersistentDataContainer().get(KeyUtil.getKey("ScrollType"),PersistentDataType.STRING) + "Scroll");
+					RewardManager.GiveTable(player, player.getName(),iMeta.getPersistentDataContainer().get(KeyUtil.getKey("ScrollType"),PersistentDataType.STRING) + "Scroll");
 					return;
-					// If the scroll isnt ended
+					// If the scroll isn't ended
 				}
 				// Get current and old location
 				Integer O = iMeta.getPersistentDataContainer().get(KeyUtil.getKey("Distance"),PersistentDataType.INTEGER);
@@ -132,8 +132,7 @@ public class Events implements Listener
 				{
 					message = ChatColor.GREEN + "You are getting closer - ";
 				}
-				else if (CurrnetDistance > O)
-				{
+				else {
 					message = ChatColor.RED + "You are going further away - ";
 				}
 				message += "You are " + Math.round(CurrnetDistance) + " Blocks away.";

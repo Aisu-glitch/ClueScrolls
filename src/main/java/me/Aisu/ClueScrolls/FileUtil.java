@@ -15,11 +15,7 @@ public class FileUtil
 	public static  HashMap<String, Integer> ScrollList = new HashMap<String, Integer>();
 	
 	public void OnStart(File Config)
-	{	
-
-		
-		
-		
+	{
 		File = Config;
 		Loc = YamlConfiguration.loadConfiguration(File);
 	}

@@ -14,7 +14,7 @@ import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.persistence.PersistentDataType;
 
-import me.Aisu.RewardPools.RewardManager;
+import me.Aisu.RewardManager.RewardManager;
 
 public class CommandListener implements CommandExecutor
 {
@@ -98,7 +98,7 @@ public class CommandListener implements CommandExecutor
 							}
 							else if (args[0].equalsIgnoreCase("Reward"))
 							{
-								RewardManager.Give(player, args[1]);
+								RewardManager.Give(player, player.getName(), args[1]);
 							}
 							else
 							{

@@ -1,9 +1,10 @@
 name: ClueScrolls
-version: 0.0.5
+version: '${project.version}'
 main: me.Aisu.ClueScrolls.Main
+api-version: 1.19
 description: Travel to a randomly given location and claim rewards
-depend: [RewardPools]
-author: Aisuboirad
+depend: [ RewardManager ]
+authors: [ Aisuboirad ]
 commands:
   Clues:
      description: Gives you this help menu
